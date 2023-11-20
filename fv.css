@@ -1,0 +1,26 @@
+#login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login-box{
+    width: 40%;
+    text-align: center;
+    height: 30px;
+    margin: 20px;
+    border-radius: 10px;
+}
+#subbutton{
+    height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 150px;
+    margin: 20px;
+}
+#error{
+    color: red;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#success{
+    color: green;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
