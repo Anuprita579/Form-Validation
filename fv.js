@@ -1,10 +1,10 @@
-var errormsg = "";
-var missfield = "";
 function isEmail(email) {
     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     return regex.test(email);
 }
 $("#subbutton").click(function(){
+    var errormsg = "";
+    var missfield = "";
     if( $("#email").val() == "" ){
         missfield += " Email is empty. ";
     }
@@ -23,9 +23,17 @@ $("#subbutton").click(function(){
     if( $("#pass").val() != $("#conpass").val() ){
         errormsg += " Password does not match. ";
     }
-    if( errormsg == "" ){
+    if( errormsg == "" && missfield=="" ){
         $("#success").html(" You are registered. ");
-        location.reload();
+
+        setTimeout(function () {
+            $("#success").html("");
+        }, 2000);
+
+        // Reload the page
+        setTimeout(function () {
+            location.reload();
+        }, 2000);
     }
     else{
     $("#error").html(errormsg + missfield);
