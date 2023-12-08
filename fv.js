@@ -25,6 +25,7 @@ $("#subbutton").click(function(){
     }
     if( errormsg == "" ){
         $("#success").html(" You are registered. ");
+        location.reload();
     }
     else{
     $("#error").html(errormsg + missfield);
